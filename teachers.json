@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Nabiha Azad",
+    "email": "nabiha.azad13@gmail.com",
+    "phone": "01921305607",
+    "subject": "english",
+    "experience": "2",
+    "availability": "",
+    "academicHistory": [
+      "Brac University, Dhaka",
+      "Primeasia University, Dhaka",
+      "Manarat International School, Dhaka"
+    ]
+  },
+  {
+    "name": "Izazul Haque",
+    "email": "izazul7@outlook.com",
+    "phone": "01963632820",
+    "subject": "chemistry, mathematics",
+    "experience": "",
+    "availability": "",
+    "academicHistory": [
+      "ASA College, NY",
+      "Oxford International School, Dhaka"
+    ]
+  }
+]

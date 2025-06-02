@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Preparation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to <span class="highlight">Exam Preparation</span></h1>
+  <a href="#" id="showStudentsLink">See Enrolled Students</a>
+  <br>
+<a href="#" id="showTeachersLink">View Teacher Credentials</a>
+<br>
+<a href="#" id="registerTeacherLink">Register Teacher</a>
+
+
+  <div id="formSection">
+   
+    <form id="enrollForm">
+      <h3 style="margin-bottom: 10px;">Student Enrollment Form</h3>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]{11}" maxlength="11" required>
+
+
+
+
+      <select name="examDate" id="examDate" required></select>
+
+     <select name="subject" id="subject" required>
+  <option value=""disabled selected>Select Subject</option>
+</select>
+
+
+      <textarea name="message" placeholder="Additional Info (Optional)"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage" class="hidden">Enrollment submitted successfully!</div>
+  </div>
+
+  <div id="loginSection" class="hidden">
+
+    <input type="password" id="teacherPassword" placeholder="Enter teacher password to see Enrolled Students">
+      
+
+    <p id="loginError" class="error hidden">Incorrect password</p>
+  </div>
+
+  <div id="studentTableSection" class="hidden">
+    <h2>Enrolled Students</h2>
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Exam Session</th><th>Subject</th><th>Info</th><th>Submitted At</th><th>Action</th>
+</tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+  </div>
+
+<div id="teacherTableSection" class="hidden">
+  <h2>Teacher Credentials</h2>
+<input type="password" id="teacherAdminPassword" placeholder="Enter Admin Password to Enable Deletion">
+
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Academic History</th><th>Email</th><th>Subject</th><th>Action</th>
+</tr>
+    </thead>
+    <tbody id="teacherTableBody"></tbody>
+  </table>
+</div>
+
+<div id="teacherFormSection" class="hidden">
+  <h2>Register New Teacher</h2>
+  <input type="password" id="teacherFormPassword" placeholder="Admin Password">
+  <form id="teacherForm" class="hidden">
+    <input name="name" placeholder="Full Name" required>
+    <input name="email" placeholder="Email" required>
+    <input name="phone" placeholder="Phone" required>
+    <input name="subject" placeholder="Subject" required>
+    <input name="experience" placeholder="Experience (e.g. 5 years)">
+    <input name="availability" placeholder="Availability (e.g. Mon-Fri, 4–8PM)">
+    <textarea name="academicHistory" placeholder="Academic History (one per line)" required></textarea>
+    <button type="submit">Add Teacher</button>
+  </form>
+  <p id="teacherAddMessage" class="hidden"></p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
