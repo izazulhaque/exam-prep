@@ -220,7 +220,8 @@ data.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
     <td>${s.examDate}</td>
     <td>${s.subject}</td>
     <td>${s.message}</td>
-    <td>${s.submittedAt || 'N/A'}</td>
+    <td>${new Date(s.submittedAt).toLocaleString()}</td>
+
     <td><button onclick="deleteStudent(${index})">Delete</button></td>
   </tr>`;
   tbody.innerHTML += row;

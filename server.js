@@ -45,7 +45,8 @@ function getCommencementDate(date = new Date()) {
 
 app.post('/enroll', (req, res) => {
   const student = req.body;
-student.submittedAt = new Date().toLocaleString();
+student.submittedAt = new Date().toISOString();
+
 
 
   fs.readFile(DATA_FILE, 'utf8', (err, data) => {
